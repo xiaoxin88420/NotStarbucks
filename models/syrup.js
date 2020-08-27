@@ -1,17 +1,17 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
-class Bean extends Model { }
+class Syrup extends Model { }
 
-Bean.init({
+Syrup.init({
   name: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  caffeine: {
-    type: DataTypes.STRING,
+  carbs: {
+    type: DataTypes.INTEGER,
     allowNull: false
   }
-}, { sequelize, modelName: 'bean' })
+}, { sequelize, modelName: 'syrup' })
 
-module.exports = Bean
+module.exports = Syrup

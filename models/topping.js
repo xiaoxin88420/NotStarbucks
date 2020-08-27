@@ -1,17 +1,17 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../db')
 
-class Bean extends Model { }
+class Topping extends Model { }
 
-Bean.init({
+Topping.init({
   name: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  caffeine: {
+  type: {
     type: DataTypes.STRING,
     allowNull: false
   }
-}, { sequelize, modelName: 'bean' })
+}, { sequelize, modelName: 'topping' })
 
-module.exports = Bean
+module.exports = Topping
