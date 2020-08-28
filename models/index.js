@@ -3,6 +3,12 @@ const Drink = require('./drink.js')
 const Syrup = require('./syrup.js')
 const Topping = require('./topping.js')
 
-Drink.hasMany(Bean, Syrup, Topping)
+Bean.hasMany(Drink)
+Syrup.hasMany(Drink)
+Topping.hasMany(Drink)
 
-module.exports = {Drink, Bean, Syrup, Topping }
+Drink.belongsTo(Bean)
+Drink.belongsTo(Syrup)
+Drink.belongsTo(Topping)
+
+module.exports = { Drink, Bean, Syrup, Topping }
