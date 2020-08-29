@@ -9,7 +9,7 @@ Bean.init({
     allowNull: false
   },
   caffeine: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     allowNull: false
   }
 }, { sequelize, modelName: 'bean' })
